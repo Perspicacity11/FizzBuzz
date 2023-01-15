@@ -21,6 +21,11 @@ end
 it 'returns "Buzz" when passed an integer multiple of 5' do
     expect(fizzbuzz(25)).to eq 'Buzz'
 end
+
+it 'returns "FizzBuzz" when passed a multiple of 3 and 5' do
+    expect(fizzbuzz(15)).to eq 'FizzBuzz'
+end
+
 end
 
 
