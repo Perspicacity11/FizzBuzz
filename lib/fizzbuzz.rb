@@ -6,23 +6,12 @@
 # When passed a number that is a multiple of both 3 and 5, the program ignores the previous 2 rules and returns the message 'FizzBuzz'.
 # In all other cases, the program simply returns the given number.
 
-require './lib/fizzbuzz'
-
-describe 'fizzbuzz' do
-    
-it 'returns the integer if not a multiple of 3 or 5' do
-  expect(fizzbuzz(1)).to eq 1
+def fizzbuzz(integer)
+ if integer % 3 == 0
+  return "Fizz"
+ elsif integer % 5 == 0
+  return "Buzz"
+ else 
+  return integer
+  end
 end
-
-it 'returns "Fizz" when passed an integer multiple of 3' do
-  expect(fizzbuzz(12)).to eq 'Fizz'
-end
-
-it 'returns "Buzz" when passed an integer multiple of 5' do
-    expect(fizzbuzz(25)).to eq 'Buzz'
-end
-end
-
-
-
-
